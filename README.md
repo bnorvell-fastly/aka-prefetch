@@ -1,6 +1,6 @@
 # Fastly Compute - Origin Assist Prefetch
 
-A Fastly Compute@Edge service implementing [Akamai-compatible Origin Assist Prefetch](https://techdocs.akamai.com/adaptive-media-delivery/docs/origin-assist-prefetch) for adaptive media streaming (HLS/DASH).
+A Fastly Compute service implementing [Akamai-compatible Origin Assist Prefetch](https://techdocs.akamai.com/adaptive-media-delivery/docs/origin-assist-prefetch) for adaptive media streaming (HLS/DASH).
 
 ## Overview
 
