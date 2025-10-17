@@ -1,0 +1,23 @@
+# This file describes a Fastly Compute package. To learn more visit:
+# https://www.fastly.com/documentation/reference/compute/fastly-toml
+
+authors = ["bnorvell@fastly.com"]
+cloned_from = "https://github.com/fastly/compute-starter-kit-go-tinygo"
+description = "Implement the Akamai prefetch specification"
+language = "go"
+manifest_version = 3
+name = "Prefetch"
+service_id = ""
+
+[local_server]
+
+  [local_server.backends]
+
+    [local_server.backends.origin]
+      override_host = "localhost"
+      url = "http://localhost:8080/"
+
+[scripts]
+  build = "tinygo build -target=wasi -o bin/main.wasm ./"
+  env_vars = ["GOARCH=wasm", "GOOS=wasip1"]
+  post_init = "go get github.com/fastly/compute-sdk-go@latest"
